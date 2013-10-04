@@ -4,7 +4,6 @@
 #             log files are generated in /var/log/pgsync directory. Make sure
 #             this directory exists before running the script.
 
-from __future__ import print_function
 import os
 import sys
 import stat
@@ -13,7 +12,6 @@ import datetime
 import subprocess
 from string import lower
 from os.path import expanduser
-from optparse import OptionParser, OptionValueError
 
 
 SOURCE = 'postgres://username:password@host:port/database'
@@ -159,7 +157,7 @@ if __name__ == '__main__':
       # extension plpgsql". So disable the retcode check for restore_db
       restore_db(target_db, dump_file)
     else:
-        logger.error('error downloading dump from source database')
+      logger.error('error downloading dump from source database')
 
     passwd_file = os.path.join(expanduser('~'), '.pgpass')
     if os.path.isfile(passwd_file):
