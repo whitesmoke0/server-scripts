@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
-# vtiger_backup.py - Dump the vTiger database and upload the dump to Amazon S3
-#                    bucket
+# mysql_backup_to_s3.py - Dump a MySQL database and upload the dump to an Amazon S3
+#                         bucket
 
 import os
 import logging
